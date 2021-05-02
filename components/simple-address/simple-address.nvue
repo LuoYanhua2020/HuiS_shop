@@ -1,0 +1,390 @@
+<template>
+	<!-- 注意！！！，没有数据也不显示组件,添加v-if -->
+	<view class="simple-address" v-if="showPopup">
+		<!-- 遮罩层 -->
+		<view class="simple-address-mask" @touchmove.stop.prevent="clear" v-if="maskClick" :class="[ani+'-mask', animation ? 'mask-ani' : '']" :style="{
+					'background-color': maskBgColor
+				}"
+		 @tap="hideMask(true)"></view>
+
+		<view class="simple-address-content simple-address--fixed" :class="[type,ani+'-content', animation ? 'content-ani' : '']">
+			<view class="simple-address__header">
+				<view class="simple-address__header-btn-box" @click="pickerCancel">
+					<text class="simple-address__header-text">取消</text>
+				</view>
+				<view class="simple-address__header-btn-box" @click="pickerConfirm">
+					<text class="simple-address__header-text" :style="{color:themeColor}">确定</text>
+				</view>
+			</view>
+			<view class="simple-address__box">
+				<!-- 控制当前显示的数据是哪一条-----pickerValue -->
+				<picker-view indicator-style="height: 70rpx;" class="simple-address-view" :value="pickerValue" @change="pickerChange" 
+				v-if="provinceDataList||cityDataList||areaDataList">
+					<!-- 省 -->
+					<picker-view-column>
+						<!-- #ifndef APP-NVUE -->
+						<view class="picker-item" v-for="item in provinceDataList" :key="item.id">{{item.name}}</view>
+						<!-- #endif -->
+						<!-- #ifdef APP-NVUE -->
+						<text class="picker-item" v-for="item in provinceDataList" :key="item.id">{{item.name}}</text>
+						<!-- #endif -->
+					</picker-view-column>
+					<!-- 市 -->
+					<picker-view-column>
+						<!-- #ifndef APP-NVUE -->
+						<view class="picker-item" v-for="item in cityDataList" :key="item.id">{{item.name}}</view>
+						<!-- #endif -->
+						<!-- #ifdef APP-NVUE -->
+						<text class="picker-item" v-for="item in cityDataList" :key="item.id">{{item.name}}</text>
+						<!-- #endif -->
+					</picker-view-column>
+					<!-- 区 -->
+					<picker-view-column>
+						<!-- #ifndef APP-NVUE -->
+						<view class="picker-item" v-for="item in areaDataList" :key="item.id">{{item.name}}</view>
+						<!-- #endif -->
+						<!-- #ifdef APP-NVUE -->
+						<text class="picker-item" v-for="(item,index) in areaDataList" :key="index">{{item.label}}</text>
+						<!-- #endif -->
+					</picker-view-column>
+				</picker-view>
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		name: "simpleAddress",
+		props: {
+			// 开启动画
+			animation: {
+				type: Boolean,
+				default: true
+			},
+			/* 弹出层类型，可选值；
+				bottom：底部弹出层
+			*/
+			type: {
+				type: String,
+				default: 'bottom'
+			},
+			// maskClick
+			maskClick: {
+				type: Boolean,
+				default: true
+			},
+			show: {
+				type: Boolean,
+				default: true
+			},
+			maskBgColor: {
+				type: String,
+				default: 'rgba(0, 0, 0, 0.4)', //背景颜色 rgba(0, 0, 0, 0.4) 为空则调用 uni.scss
+			},
+			themeColor: {
+				type: String,
+				default: '', // 主题色
+			},
+			/* 默认值 */
+			pickerValueDefault: {
+				type: Array,
+				default () {
+					return [0, 0, 0]
+				}
+			},
+			// 接收所有省份的数据
+			provinceData: {
+				type: Array,
+				default: []
+			},
+			// 接收市级的数据
+			cityData: {
+				type: Array,
+				default: []
+			},
+			// 接收县级的数据
+			areaData: {
+				type: Array,
+				default: []
+			}
+		},
+		data() {
+			return {
+				ani: '',
+				showPopup: false,
+				// 控制当前选中的地址的三级坐标数组
+				pickerValue: [0, 0, 0],
+				provinceDataList: [],
+				cityDataList: [],
+				areaDataList: [],
+			}
+		},
+		watch: {
+			show(newValue) {
+				if (newValue) {
+					this.open()
+				} else {
+					this.close()
+				}
+			},
+			// 坐标变化，就再次重新获取数组的三个数据
+			pickerValueDefault() {
+				this.init();
+			}
+		},
+		// 钩子函数中打开，加载数据
+		created() {
+			this.init()
+			this.pickerChange(this.pickerValueDefault)
+		},
+		methods: {
+			init() {
+				this.provinceDataList = this.provinceData;
+				// 默认值【0,0,0】筛选一下市和县的数据，不能全部放进去
+				this.cityDataList =this.cityData.filter((item)=>{return item.pid==this.provinceData[0].id});
+				this.areaDataList = this.areaData.filter((item)=>{return item.pid==this.cityDataList[0].id});
+				// 现在已经把父级默认显示的赋值给子组件的显示数组了
+				this.pickerValue = this.pickerValueDefault;
+				console.log(this.cityDataList)
+			},
+			// 监控地址滑动变化
+			pickerChange(e) {
+				// 滑动，改变后新的数组值
+				let changePickerValue = e.detail.value;
+				if (this.pickerValue[0] !== changePickerValue[0]) {
+					// 第一级发生滚动,后面市县的默认相应省第一个
+					// 通过pid与父级的id比对，通过他们的联系归类查找，更新
+					this.cityDataList = this.cityData.filter((item)=>{return item.pid==this.provinceData[changePickerValue[0]].id});
+					this.areaDataList = this.areaData.filter((item)=>{return item.pid==this.cityDataList[changePickerValue[1]].id});
+					changePickerValue[1] = 0;
+					changePickerValue[2] = 0;
+				} else if (this.pickerValue[1] !== changePickerValue[1]) {
+					// 第二级滚动
+					this.areaDataList =this.areaData.filter((item)=>{return item.pid==this.cityDataList[changePickerValue[1]].id});
+					changePickerValue[2] = 0;
+				}
+				this.pickerValue = changePickerValue;
+				this._$emit('onChange');
+			},
+			_$emit(emitName) {
+				let pickObj = {
+					label: this._getLabel(),
+					value: this.pickerValue,
+					// provinceId: this._getProvinceCode(),
+					// cityId: this._getCityCode(),
+					areaId: this._getAreaCode(),
+				};
+				this.$emit(emitName, pickObj);
+			},
+			_getLabel() {
+				let pcikerLabel =
+				'中国,'+
+					this.provinceDataList[this.pickerValue[0]].name +
+					',' +
+					this.cityDataList[this.pickerValue[1]].name +
+					',' +
+					this.areaDataList[this.pickerValue[2]].name;
+				return pcikerLabel;
+			},
+			// _getCityCode() {
+			// 	return this.cityDataList[this.pickerValue[1]].id;
+			// },
+			// _getProvinceCode() {
+			// 	return this.provinceDataList[this.pickerValue[0]].id;
+			// },
+			// 返回县级的作为id就够了
+			_getAreaCode() {
+				return this.areaDataList[this.pickerValue[2]].id;
+			},
+			// 点击遮罩层的事件，与取消按钮差不多
+			hideMask() {
+				this._$emit('onCancel');
+				this.close();
+			},
+			// 取消按钮
+			pickerCancel() {
+				this._$emit('onCancel');
+				this.close();
+				console.log("111")
+			},
+			// 确认按钮
+			pickerConfirm() {
+				this._$emit('onConfirm');
+				this.close();
+			},
+			// 打开弹框事件
+			open() {
+				// 没有最下级-县级数据就提示消息
+				if(this.provinceDataList.length==0){
+					uni.showToast({
+						title:'数据加载中...',
+						icon:'none'
+					})
+				}else{
+					// 有数据才显示组件选择地址
+					this.showPopup = true
+					this.$nextTick(() => {
+						setTimeout(() => {
+							this.ani = 'simple-' + this.type
+						}, 100)
+					})
+				}
+			},
+			// 关闭弹框事件
+			close(type) {
+				if (!this.maskClick && type) return;
+				this.ani = ''
+				this.$nextTick(() => {
+					setTimeout(() => {
+						this.showPopup = false
+					}, 300)
+				})
+			}
+		}
+	}
+</script>
+
+<style lang="scss" scoped>
+	.simple-address {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: column;
+	}
+
+	.simple-address-mask {
+		position: fixed;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		transition-property: opacity;
+		transition-duration: 0.3s;
+		opacity: 0;
+		/* #ifndef APP-NVUE */
+		z-index: 99;
+		/* #endif */
+	}
+
+
+	.mask-ani {
+		transition-property: opacity;
+		transition-duration: 0.2s;
+	}
+
+	.simple-bottom-mask {
+		opacity: 1;
+	}
+
+	.simple-center-mask {
+		opacity: 1;
+	}
+
+	.simple-address--fixed {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transition-property: transform;
+		transition-duration: 0.3s;
+		transform: translateY(460rpx);
+		/* #ifndef APP-NVUE */
+		z-index: 99;
+		/* #endif */
+	}
+
+	.simple-address-content {
+		background-color: #FFFFFF;
+	}
+
+	.simple-content-bottom {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transform: translateY(500rpx);
+	}
+
+	.content-ani {
+		transition-property: transform, opacity;
+		transition-duration: 0.2s;
+	}
+
+	.simple-bottom-content {
+		transform: translateY(0);
+	}
+
+	.simple-center-content {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	.simple-address__header {
+		position: relative;
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		border-bottom-color: #f2f2f2;
+		border-bottom-style: solid;
+		border-bottom-width: 1rpx;
+	}
+
+	.simple-address--fixed-top {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		justify-content: space-between;
+		border-top-color: $uni-border-color;
+		border-top-style: solid;
+		border-top-width: 1rpx;
+	}
+
+	.simple-address__header-btn-box {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		height: 70rpx;
+	}
+
+	.simple-address__header-text {
+		text-align: center;
+		font-size: $uni-font-size-base;
+		color: #1aad19;
+		line-height: 70rpx;
+		padding-left: 40rpx;
+		padding-right: 40rpx;
+	}
+
+	.simple-address__box {
+		position: relative;
+	}
+
+	.simple-address-view {
+		position: relative;
+		bottom: 0;
+		left: 0;
+		/* #ifndef APP-NVUE */
+		width: 100%;
+		/* #endif */
+		/* #ifdef APP-NVUE */
+		width: 750rpx;
+		/* #endif */
+		height: 408rpx;
+		background-color: rgba(255, 255, 255, 1);
+	}
+
+	.picker-item {
+		text-align: center;
+		line-height: 70rpx;
+		text-overflow: ellipsis;
+		font-size: 28rpx;
+	}
+</style>

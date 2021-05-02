@@ -1,0 +1,66 @@
+.BoutiqueParent {
+  margin-top: 20rpx;
+}
+.BoutiqueParent .BoutiqueTop {
+  width: 100%;
+  height: 75rpx;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.BoutiqueParent .BoutiqueTop text {
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  font-weight: bold;
+}
+.BoutiqueParent .BoutiqueContent {
+  margin-top: 5rpx;
+  padding: 5rpx 0;
+  width: 750rpx;
+  height: 340rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  overflow: hidden;
+}
+.BoutiqueParent .BoutiqueContent ._ul {
+  width: 150%;
+  height: 340rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  background-color: #ffffff;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.BoutiqueParent .BoutiqueContent ._ul ._li {
+  width: 200rpx;
+  height: 340rpx;
+  padding: 0 15rpx;
+}
+.BoutiqueParent .BoutiqueContent ._ul ._li image {
+  width: 200rpx;
+  height: 60%;
+}
+.BoutiqueParent .BoutiqueContent ._ul ._li view {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+}
+.BoutiqueParent .BoutiqueContent ._ul ._li text {
+  font-size: 30rpx;
+  color: red;
+}
+

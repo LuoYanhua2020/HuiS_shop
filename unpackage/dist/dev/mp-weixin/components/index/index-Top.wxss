@@ -1,0 +1,38 @@
+#Top.data-v-1dadf9d2 {
+  width: 95%;
+  height: 60rpx;
+  margin: 0rpx auto;
+  margin-top: 5rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  background-color: #ebebeb;
+  border-radius: 30rpx;
+}
+#Top view.data-v-1dadf9d2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+#Top view ._p.data-v-1dadf9d2 {
+  width: 10%;
+  margin-right: 20rpx;
+}
+#Top view input.data-v-1dadf9d2 {
+  width: 100%;
+  height: 100%;
+  font-size: 30rpx;
+}
+#parent.data-v-1dadf9d2 {
+  padding-top: 15rpx;
+}
+

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "swiper-tab-head": "/components/swiper-tab-head",
+    "order-module": "/components/OrderModule"
+  }
+}

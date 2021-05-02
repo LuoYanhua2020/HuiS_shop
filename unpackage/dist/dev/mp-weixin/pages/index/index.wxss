@@ -1,0 +1,87 @@
+.home .Swiper {
+  padding-top: 15rpx;
+}
+.home .Swiper swiper {
+  width: 710rpx;
+  height: 370rpx;
+  margin: 0rpx auto;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+.home .Swiper swiper image {
+  width: 100%;
+  height: 100%;
+}
+.home .classiF {
+  width: 750rpx;
+  height: 165rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  padding: 25rpx 0;
+  background-color: #FFFFFF;
+}
+.home .classiF .classChild {
+  width: 23%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.home .classiF .classChild view {
+  width: 100%;
+  height: 65%;
+  text-align: center;
+}
+.home .classiF .classChild view image {
+  width: 70%;
+  height: 100%;
+}
+.home .classiF .classChild text {
+  font-size: 30rpx;
+  text-align: center;
+}
+.home .advertiseM {
+  width: 750rpx;
+  height: 180rpx;
+}
+.home .advertiseM image {
+  width: 100%;
+  height: 100%;
+}
+.home .FenContent {
+  width: 750rpx;
+  height: 130rpx;
+  background-color: #ffffff;
+  margin-top: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.home .FenContent view {
+  width: 40%;
+  text-align: center;
+}
+.home .FenContent view text {
+  font-size: 38rpx;
+  font-weight: bolder;
+}
+.home .FenContent image {
+  width: 90rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+

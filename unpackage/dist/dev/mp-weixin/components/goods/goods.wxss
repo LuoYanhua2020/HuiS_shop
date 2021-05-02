@@ -1,0 +1,105 @@
+.active {
+  border-bottom: 1px solid red;
+  color: red;
+}
+.Goodsparent .GoodsTop {
+  width: 100%;
+  height: 95rpx;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 5rpx;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.Goodsparent view {
+  width: 180rpx;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.Goodsparent view text {
+  font-size: 35rpx;
+}
+.Goodsparent view ._p {
+  width: 30%;
+  height: 75%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.Goodsparent view ._p image {
+  width: 40rpx;
+  height: 30rpx;
+}
+.Goodsparent .GoodsContent {
+  width: 100%;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 30rpx;
+  box-sizing: border-box;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.Goodsparent .GoodsContent .Goodschilds {
+  width: 48%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.Goodsparent .GoodsContent .Goodschilds view {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.Goodsparent .GoodsContent .Goodschilds view text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+.Goodsparent .GoodsContent .Goodschilds .childimg {
+  width: 100%;
+  height: 350rpx;
+  overflow: hidden;
+}
+.Goodsparent .GoodsContent .Goodschilds .childimg image {
+  width: 110%;
+}
+.Goodsparent .GoodsBootom {
+  width: 100%;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+.Goodsparent .GoodsBootom text {
+  font-size: 35rpx;
+  color: #555555;
+}
+

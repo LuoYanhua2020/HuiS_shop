@@ -1,0 +1,201 @@
+.CartParent .createTop {
+  width: 100%;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.CartParent .createTop .createTop_null {
+  width: 40px;
+  padding: 15rpx 0;
+  box-sizing: border-box;
+}
+.CartParent .createTop .createTop_null image {
+  width: 65rpx;
+  height: 63rpx;
+}
+.CartParent .createTop .Adress {
+  width: 80%;
+}
+.CartParent .createTop .Adress .Adress_top {
+  width: 100%;
+  padding: 5rpx 0;
+}
+.CartParent .createTop .Adress .Adress_top text:nth-child(1) {
+  font-size: 35rpx;
+  margin-right: 20rpx;
+}
+.CartParent .createTop .Adress .Adress_top text:nth-child(2) {
+  font-size: 30rpx;
+}
+.CartParent .createTop .Adress .Adress_bottom {
+  width: 100%;
+  padding: 25rpx 0;
+}
+.CartParent .createTop .Adress .Adress_bottom text {
+  font-size: 30rpx;
+  color: #909399;
+}
+.CartParent .createTop .Adress .Adress_bottom text:nth-child(1) {
+  margin-right: 15rpx;
+}
+.CartParent .createTop .LineBottom {
+  width: 100%;
+  position: absolute;
+  bottom: -10rpx;
+  left: 0rpx;
+}
+.CartParent .createTop .LineBottom image {
+  width: 100%;
+  height: 6rpx;
+}
+.CartParent .ProductInformation {
+  width: 100%;
+  height: 190rpx;
+  background-color: #FFFFFF;
+  padding: 0 30rpx 20rpx 30rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.CartParent .ProductInformation .InformationLeft {
+  width: 25%;
+  height: 100%;
+}
+.CartParent .ProductInformation .InformationRight {
+  width: 72%;
+  height: 100%;
+}
+.CartParent .ProductInformation .InformationRight ._p {
+  width: 100%;
+  height: 25%;
+  margin-top: 10rpx;
+}
+.CartParent .ProductInformation .InformationRight ._p:nth-child(1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+}
+.CartParent .ProductInformation .InformationRight ._p:nth-child(2) {
+  font-size: 28rpx;
+  color: #888888;
+}
+.CartParent .ProductInformation .InformationRight ._p:nth-child(3) {
+  font-size: 35rpx;
+}
+.CartParent .ProductInformation .InformationRight ._p:nth-child(3) text ._span {
+  font-size: 30rpx;
+  color: #666666;
+  margin-left: 22rpx;
+  letter-spacing: 10rpx;
+}
+.CartParent .ProductPrice {
+  width: 100%;
+  height: 370rpx;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 15rpx;
+}
+.CartParent .ProductPrice .ProductPAll {
+  width: 90%;
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.CartParent .ProductPrice .ProductPAll text {
+  color: #888888;
+  line-height: 20rpx;
+  font-size: 30rpx;
+}
+.CartParent .ProductPrice .FullDiscount ._p {
+  color: #fa436a;
+}
+.CartParent .ProductPrice .Remarks {
+  width: 90%;
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+          justify-content: start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.CartParent .ProductPrice .Remarks text {
+  color: #888888;
+  margin-right: 50rpx;
+  font-size: 30rpx;
+}
+.CartParent .ActualPayment {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  bottom: 5rpx;
+  left: 0rpx;
+  background-color: #FFFFFF;
+  box-shadow: 0 -1px 5px rgb(0 0 0%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+          justify-content: start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.CartParent .ActualPayment ._p {
+  margin: 0rpx 30rpx;
+  color: #606266;
+  font-size: 30rpx;
+}
+.CartParent .ActualPayment text {
+  color: #fa436a;
+  font-size: 30rpx;
+}
+.CartParent .ActualPayment .Submit {
+  width: 270rpx;
+  height: 100%;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  color: #FFFFFF;
+  font-size: 40rpx;
+  background-color: #999999;
+}
+

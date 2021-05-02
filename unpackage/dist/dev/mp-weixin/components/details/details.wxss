@@ -1,0 +1,289 @@
+.detailsParent .GoodTop {
+  width: 750rpx;
+  height: 780rpx;
+}
+.detailsParent .GoodTop image {
+  width: 100%;
+  height: 100%;
+}
+.detailsParent .GoodContent {
+  width: 750rpx;
+  height: 340rpx;
+  box-sizing: border-box;
+  padding: 28rpx;
+  background-color: #ffffff;
+}
+.detailsParent .GoodContent .Content-one {
+  width: 100%;
+  height: 90rpx;
+}
+.detailsParent .GoodContent .Content-one text {
+  width: 100%;
+  height: 100%;
+  font-size: 34rpx;
+}
+.detailsParent .GoodContent .Content-two {
+  width: 100%;
+  height: 44rpx;
+  margin: 15rpx 0;
+}
+.detailsParent .GoodContent .Content-two text {
+  color: red;
+  font-size: 38rpx;
+  margin-right: 15rpx;
+}
+.detailsParent .GoodContent .Content-two ._span {
+  font-size: 30rpx;
+  color: #555555;
+  text-decoration: line-through;
+}
+.detailsParent .GoodContent .Content-three {
+  width: 100%;
+  height: 45rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.detailsParent .GoodContent .Content-three view {
+  width: 50%;
+  height: 100%;
+}
+.detailsParent .GoodContent .Content-three view ._span {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: #555555;
+  font-size: 26rpx;
+}
+.detailsParent .GoodContent .Content-four {
+  width: 100%;
+  height: 60rpx;
+  margin: 25rpx 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.detailsParent .GoodContent .Content-four view ._span {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: #555555;
+  font-size: 33rpx;
+}
+.detailsParent .GoodContent .Content-four view text {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: #222222;
+  font-size: 33rpx;
+}
+.detailsParent .GoodContent .Content-four image {
+  width: 80rpx;
+  height: 65rpx;
+  margin-right: 15rpx;
+}
+.detailsParent .GoodNumber {
+  width: 100%;
+  height: 90rpx;
+  background-color: #FFFFFF;
+  margin-top: 5rpx;
+  padding: 28rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.detailsParent .GoodNumber text {
+  width: 70rpx;
+  font-size: 31rpx;
+  color: #555555;
+}
+.detailsParent .GoodNumber view {
+  width: 150rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.detailsParent .GoodNumber view image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.detailsParent .GoodNumber view text {
+  text-align: center;
+  font-size: 36rpx;
+}
+.detailsParent .GoodComment {
+  width: 750rpx;
+  background-color: #FFFFFF;
+  margin-top: 15rpx;
+  padding: 28rpx;
+  box-sizing: border-box;
+}
+.detailsParent .GoodComment .Comment-one {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  font-size: 31rpx;
+  color: #555555;
+}
+.detailsParent .GoodComment .Comment-two {
+  width: 100%;
+  height: 40rpx;
+  margin: 20rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.detailsParent .GoodImgDetails {
+  width: 750rpx;
+  background-color: #FFFFFF;
+  margin-top: 15rpx;
+}
+.detailsParent .GoodImgDetails .ImgDetails-top {
+  width: 100%;
+  height: 100rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.detailsParent .GoodImgDetails .ImgDetails-top text {
+  font-size: 39rpx;
+  color: #555555;
+}
+.detailsParent .GoodImgDetails .ImgDetails-top text ._span {
+  color: black;
+}
+.detailsParent .GoodImgDetails .ImgDetails-img {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.detailsParent .GoodImgDetails .ImgDetails-img image {
+  width: 600rpx;
+  height: 690rpx;
+}
+.detailsParent .GoodImgDetails .ImgDetails-null {
+  width: 100%;
+  height: 200rpx;
+}
+.detailsParent .EditBottom {
+  width: 94%;
+  height: 65px;
+  box-shadow: 0 0 20rpx 0 #888888;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background-color: #FFFFFF;
+}
+.detailsParent .EditBottom .EditBottom_left {
+  width: 45%;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.detailsParent .EditBottom .EditBottom_left navigator,
+.detailsParent .EditBottom .EditBottom_left ._p {
+  width: 33%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.detailsParent .EditBottom .EditBottom_left navigator image,
+.detailsParent .EditBottom .EditBottom_left ._p image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 5rpx;
+}
+.detailsParent .EditBottom .EditBottom_left navigator text,
+.detailsParent .EditBottom .EditBottom_left ._p text {
+  font-size: 25rpx;
+  color: #888888;
+}
+.detailsParent .EditBottom .EditBottom_right {
+  width: 55%;
+  height: 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background: -webkit-linear-gradient(left, #ffac30, #fa436a, #f56c6c);
+  background: linear-gradient(90deg, #ffac30, #fa436a, #f56c6c);
+  border-radius: 60rpx;
+}
+.detailsParent .EditBottom .EditBottom_right button {
+  width: 50%;
+  height: 40px;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFFFF;
+}
+

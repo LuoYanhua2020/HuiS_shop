@@ -1,0 +1,187 @@
+.pageParent .page_header {
+  width: 100%;
+  height: 430rpx;
+  background-color: #FFFFFF;
+  position: relative;
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  overflow: hidden;
+}
+.pageParent .page_header image {
+  width: 100%;
+  height: 100%;
+}
+.pageParent .page_header .page_headbg {
+  width: 90%;
+  height: 400rpx;
+  background-color: #000000;
+  opacity: 0.75;
+  position: absolute;
+  top: 300rpx;
+  left: 38rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+.pageParent .page_header .page_headbg image {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 10rpx;
+  left: 200rpx;
+}
+.pageParent .page_header .page_headbg navigator {
+  width: 160rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 10rpx;
+  color: #36343c;
+  border-radius: 20rpx;
+  background: -webkit-gradient(linear, left top, right top, from(#f9e6af), to(#ffd465));
+}
+.pageParent .page_header .page_headcontent {
+  position: absolute;
+  top: 120rpx;
+  left: 50rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.pageParent .page_header .page_headcontent image {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.pageParent .page_header .page_headcontent text {
+  font-size: 25px;
+}
+.pageParent .Allorder {
+  width: 90%;
+  height: 210rpx;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  background-color: #FFFFFF;
+  margin: 40rpx 0 0 40rpx;
+  border-radius: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.pageParent .Allorder .orders {
+  width: 25%;
+  height: 110rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.pageParent .Allorder .orders image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.pageParent .Allorder .orders text {
+  width: 100%;
+  text-align: center;
+}
+.pageParent .AddManagement {
+  width: 90%;
+  height: 380rpx;
+  margin: 15rpx 0 0 40rpx;
+  background-color: #FFFFFF;
+  padding: 2rpx 30rpx;
+  box-sizing: border-box;
+}
+.pageParent .AddManagement .AddManagements {
+  width: 100%;
+  height: 70rpx;
+  padding: 20rpx 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.pageParent .AddManagement .AddManagements view {
+  width: 10%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.pageParent .AddManagement .AddManagements view image {
+  width: 51rpx;
+  height: 45rpx;
+}
+.pageParent .AddManagement .AddManagements navigator {
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-bottom: 1px solid #dddddd;
+  padding: 10rpx 0px;
+}
+.pageParent .AddManagement .AddManagements navigator image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.pageParent .AddManagement .AddManagements navigator text {
+  font-size: 30rpx;
+}
+.pageParent .AddManagement view:nth-child(3) view:nth-child(2) {
+  border-bottom: 0px;
+}
+.pageParent .MemberGo {
+  width: 90%;
+  height: 100rpx;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.pageParent .MemberGo uni-button:after {
+  border: 0px !important;
+}
+.pageParent .MemberGo button {
+  width: 250rpx;
+  height: 80rpx;
+  font-size: 35rpx;
+  color: red;
+  background-color: initial;
+}
+

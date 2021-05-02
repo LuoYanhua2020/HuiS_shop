@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "index-top": "/components/index/index-Top",
+    "boutique-area": "/components/index/Boutique-area"
+  }
+}

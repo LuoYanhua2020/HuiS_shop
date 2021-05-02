@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/classif/classif",
+    "pages/member/member",
+    "components/details/details",
+    "components/goods/goods",
+    "pages/Login/Login",
+    "components/CreateOrder/CreateOrder",
+    "components/Receiving_address/Receiving_address",
+    "components/AddAddress/AddAddress",
+    "components/setUp/setUp",
+    "components/Order/Order"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "聚新商城",
+    "navigationBarBackgroundColor": "#d81e06",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "selectedColor": "#d81e06",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/home-active.png"
+      },
+      {
+        "text": "分类",
+        "pagePath": "pages/classif/classif",
+        "iconPath": "static/icon/classification.png",
+        "selectedIconPath": "static/icon/classification-active.png"
+      },
+      {
+        "text": "购物车",
+        "pagePath": "pages/cart/cart",
+        "iconPath": "static/icon/cart.png",
+        "selectedIconPath": "static/icon/cart-active.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/member/member",
+        "iconPath": "static/icon/member.png",
+        "selectedIconPath": "static/icon/member-active.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap17.json"
+}

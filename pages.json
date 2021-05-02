@@ -1,0 +1,162 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index"
+		}
+	    ,{
+            "path" : "pages/cart/cart",
+			"style" :  {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "购物车",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+        }
+        ,{
+            "path" : "pages/classif/classif",
+            "style" :  {
+				"navigationBarTextStyle": "black",
+				"navigationBarTitleText": "分类",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+        }
+        ,{
+            "path" : "pages/member/member",
+			"style" :  {
+				"navigationStyle":"custom"
+			}
+        }
+        ,{
+            "path" : "components/details/details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品详情",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "black",
+				"navigationBarBackgroundColor": "#FFFFFF"
+            }
+        }
+        ,{
+            "path" : "components/goods/goods",
+            "style" :  {
+            	"navigationBarTextStyle": "black",
+            	"navigationBarTitleText": "商品列表",
+            	"navigationBarBackgroundColor": "#FFFFFF"
+            }
+        }
+        ,{
+            "path" : "pages/Login/Login",
+            "style" :  {
+            	"navigationBarTextStyle": "black",
+            	"navigationBarTitleText": "登录",
+            	"navigationBarBackgroundColor": "#FFFFFF"
+            }
+        }
+        ,{
+            "path" : "components/CreateOrder/CreateOrder",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "创建订单",
+				"navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+            
+        }
+        ,{
+            "path" : "components/Receiving_address/Receiving_address",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "收货地址",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+            
+        }
+        ,{
+            "path" : "components/AddAddress/AddAddress",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "新增收货地址",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+            
+        }
+        ,{
+            "path" : "components/setUp/setUp",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "设置",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+            
+        }
+        ,{
+            "path" : "components/Order/Order",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的订单",
+                "navigationBarTextStyle": "black",
+                "navigationBarBackgroundColor": "#FFFFFF"
+            }
+            
+        },
+		{
+		    "path" : "components/payment/payment",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "支付",
+		        "navigationBarTextStyle": "black",
+		        "navigationBarBackgroundColor": "#FFFFFF"
+		    }
+		    
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "惠晟商城",
+		"navigationBarBackgroundColor": "#d81e06",
+		"backgroundColor": "#FFFFFF"
+	},
+	// 配置tabBar
+	"tabBar":{
+		// 选中时的文字样式
+		"selectedColor":"#d81e06",
+		"list":[
+			{
+				"text":"首页",
+				"pagePath":"pages/index/index",
+				"iconPath":"static/icon/home.png",
+				"selectedIconPath":"static/icon/home-active.png"
+			},
+			{
+				"text":"分类",
+				"pagePath":"pages/classif/classif",
+				"iconPath":"static/icon/classification.png",
+				"selectedIconPath":"static/icon/classification-active.png"
+			},
+			{
+				"text":"购物车",
+				"pagePath":"pages/cart/cart",
+				"iconPath":"static/icon/cart.png",
+				"selectedIconPath":"static/icon/cart-active.png"
+			},
+			{
+				"text":"我的",
+				"pagePath":"pages/member/member",
+				"iconPath":"static/icon/member.png",
+				"selectedIconPath":"static/icon/member-active.png"
+			}
+		]
+	}
+	// "condition" : { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式(list 的索引项)
+	// 	"list": [
+	// 		{
+	// 			"name": "", //模式名称
+	// 			"path": "", //启动页面，必选
+	// 			"query": "" //启动参数，在页面的onLoad函数里面得到
+	// 		}
+	// 	]
+	// }
+}
